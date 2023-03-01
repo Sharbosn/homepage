@@ -64,17 +64,17 @@ scene.add(pointLight, ambientLight);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
-document.addEventListener("wheel", handleWheel, { passive: false });
-document.addEventListener("scroll", handleScroll, { passive: false });
+//document
+renderer.domElement.addEventListener("wheel", handleWheel, { passive: false });
 
 const geom = new THREE.BoxGeometry(1, 1, 1);
 const mat = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube1 = new THREE.Mesh(geom, mat);
-cube1.position.set(-67, 20, -13);
+cube1.position.set(53, 20, 21);
 const cube2 = new THREE.Mesh(geom, mat);
 cube2.position.set(20, 20, -64);
 const cube3 = new THREE.Mesh(geom, mat);
-cube3.position.set(53, 20, 21);
+cube3.position.set(-67, 20, -13);
 
 const label1 = new SpriteText(
   "Project 1: \n If ___ on campus were more user-friendly…"
@@ -82,7 +82,7 @@ const label1 = new SpriteText(
 label1.fontFace = "Courier New";
 label1.textHeight = 2;
 label1.fontWeight = "bold";
-label1.position.set(-67, 23, -13);
+label1.position.set(53, 23, 21);
 label1.userData.id = "label1";
 const label2 = new SpriteText("Project 2: \n HRI for Wellbeing");
 label2.fontFace = "Courier New";
@@ -97,7 +97,7 @@ const label3 = new SpriteText(
 label3.fontFace = "Courier New";
 label3.textHeight = 2;
 label3.fontWeight = "bold";
-label3.position.set(53, 23, 21);
+label3.position.set(-67, 23, -13);
 label3.userData.id = "label3";
 
 env.add(cube1, cube2, cube3, label1, label2, label3);
@@ -106,9 +106,9 @@ let y_scroll = 0;
 function handleWheel(e) {
   e.preventDefault();
   y_scroll = e.deltaY * 0.0009;
-}
-function handleScroll(e) {
-  e.preventDefault();
+  if (e.target.tagName.toLowerCase() !== "canvas") {
+    window.scrollTo(0, window.scrollY - e.wheelDeltaY);
+  }
 }
 
 let value = Math.PI;
@@ -140,7 +140,7 @@ function App() {
       window.removeEventListener("resize", onWindowResize);
     };
   }, []);
-
+  const [isIntroOpen, setIsIntroOpen] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [label, setLabel] = useState("");
 
@@ -160,14 +160,13 @@ function App() {
 
   return (
     <Box ref={canvasRef}>
-      <Box
-        position="absolute"
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-      >
-        <p>Hello, Chakra UI!</p>
-      </Box>
+      <ProjectPage
+        label={"self-intro"}
+        isOpen={isIntroOpen}
+        onClose={() => {
+          setIsIntroOpen(false);
+        }}
+      ></ProjectPage>
       <ProjectPage
         label={label}
         isOpen={isModalOpen}

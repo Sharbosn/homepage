@@ -1,4 +1,21 @@
-.heading,
+.heading {
+  font-size: 22pt;
+}
+
 .subheadings {
-  font-size: 1.5em;
+  font-size: 18pt;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 10px;
+  font-size: 14pt;
+}
+
+img {
+  display: block;
+  margin: auto;
+  padding: 30px;
 }
