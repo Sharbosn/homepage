@@ -23,7 +23,12 @@ import pic2_3 from "./assets/project2/3.png";
 import pic2_4 from "./assets/project2/4.png";
 import pic2_6 from "./assets/project2/6.png";
 import pic2_7 from "./assets/project2/7.png";
-import pic2_8 from "./assets/project2/8.png";
+
+import header3 from "./assets/project3/1.png";
+import pic3_2 from "./assets/project3/2.png";
+import pic3_3 from "./assets/project3/3.png";
+import pic3_4 from "./assets/project3/4.png";
+import pic3_5 from "./assets/project3/5.png";
 
 export function ProjectPage({ label, isOpen, onClose }) {
   return (
@@ -392,7 +397,168 @@ export function ProjectPage({ label, isOpen, onClose }) {
                   </p>
                 </div>
               )}
-              {label === "label3" && <p>There is no content available yet.</p>}
+              {label === "label3" && (
+                <div>
+                  <p className="content">
+                    <img src={header3} />
+                    <p className="subheadings">Brainstorming</p>
+                    <p>
+                      Lifelong learning is about pursuing education beyond the
+                      requirements of formal schooling or corporate training.
+                      There are many Youtube channels teaching practical life
+                      skills like cooking, chess etc, promoting lifelong
+                      learning. However, online learning like watching videos on
+                      Youtube has its own disadvantages. First, the learning
+                      experience is not immersive. Second, it is one-way and not
+                      interactive. Third, teaching contents are more general.
+                      These problems can be solved possibly using VR, so that
+                      lifelong learning could be further promoted. We hereby
+                      discuss the future of having an online VR learning
+                      platform, where tutors can prepare realistic 3D
+                      environments and lessons for their students to take at
+                      their convenience. Or, that they can meet in real time
+                      inside the virtual environment and the tutors could
+                      customize students' learning and give lessons, just like
+                      what we do in real life.
+                    </p>
+                    <img src={pic3_3} />
+                    <div className="display-flex">
+                      <p
+                        style={{
+                          height: "auto",
+                          width: "50%",
+                          float: "left",
+                          padding: " 50px",
+                          paddingTop: "60px",
+                        }}
+                      >
+                        <p className="subheadings">POV</p>
+                        <p>
+                          <span style={{ fontWeight: "600" }}>User:</span>{" "}
+                          People who can't be physically present in class
+                        </p>
+                        <p>
+                          <span style={{ fontWeight: "600" }}>Need:</span>{" "}
+                          Acquire new knowledge or skills of any kind they are
+                          interested in to enhance their personal development
+                        </p>
+                        <p>
+                          <span style={{ fontWeight: "600" }}>Goal:</span> Learn
+                          new life skills in an efficient and iteractive way
+                        </p>
+                      </p>
+                      <img
+                        style={{
+                          height: "auto",
+                          width: "50%",
+                          float: "right",
+                          paddingTop: "30px",
+                        }}
+                        src={pic3_2}
+                      />
+                      <img
+                        style={{ height: "auto", width: "50%", float: "left" }}
+                        src={pic3_4}
+                      />
+                      <p
+                        style={{
+                          height: "auto",
+                          width: "50%",
+                          float: "right",
+                          padding: " 50px",
+                          paddingTop: "80px",
+                        }}
+                      >
+                        <p className="subheadings">
+                          Storyboard and speed dating
+                        </p>
+                        <p>
+                          We verified our ideas by drawing the storyboard and
+                          asking for the opinion of our students
+                        </p>
+                      </p>
+                    </div>
+                    <img
+                      style={{
+                        height: "auto",
+                        width: "auto",
+                      }}
+                      src={pic3_5}
+                    />
+                    <div className="display-flex">
+                      <p
+                        className="subheadings"
+                        style={{ textAlign: "center" }}
+                      >
+                        Prototype
+                      </p>
+                    </div>
+
+                    <div className="display-flex">
+                      <p
+                        style={{
+                          height: "auto",
+                          width: "50%",
+                          float: "left",
+                          padding: " 50px",
+                          paddingTop: "60px",
+                        }}
+                      >
+                        Example 1: chess
+                      </p>
+
+                      <iframe
+                        width="auto"
+                        height="auto"
+                        src="https://www.youtube.com/embed/mez2f7c4z0s"
+                      ></iframe>
+                    </div>
+                    <div className="display-flex" style={{ padding: "10px" }}>
+                      <p
+                        style={{
+                          height: "auto",
+                          width: "50%",
+                          float: "left",
+                          padding: " 50px",
+                          paddingTop: "60px",
+                        }}
+                      >
+                        Example 2: cooking
+                      </p>
+
+                      <iframe
+                        width="auto"
+                        height="auto"
+                        src="https://www.youtube.com/embed/GepUUaFSBAI"
+                      ></iframe>
+                    </div>
+
+                    <p className="subheadings">Contributions</p>
+                    <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+                      <p>
+                        I have done the speed dating part of the project. I am
+                        grateful for my groupmates preparing the prototype demo.
+                      </p>
+                    </div>
+                    <p style={{ paddingTop: "30px" }} className="subheadings">
+                      Reflections
+                    </p>
+                    <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+                      <p>
+                        I appreciate the chance to get to know more about VR,
+                        targeting and coming up ideas to improve people's
+                        lifestyles. After these 3 projects, I understand the
+                        importance of time management and prioritizing things.
+                        Moreover, the brainstorming part is crucial to projects.
+                        I enjoy listening to the presentations of different
+                        groups, becuase our classmates can always think of
+                        different approaches to questions that our group has not
+                        considered before and it is always interesting.
+                      </p>
+                    </div>
+                  </p>
+                </div>
+              )}
             </ModalBody>
 
             <ModalFooter />
